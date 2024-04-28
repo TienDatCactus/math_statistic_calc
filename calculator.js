@@ -9,6 +9,9 @@ const calculate = () => {
   // median
   const median = getMedian(numbers);
   $(".median>p").textContent = median;
+  //mode
+  const mode = getMode(numbers);
+  $(".mode>p").textContent = mode;
 };
 
 // calc mean
@@ -29,4 +32,24 @@ function getMedian(array) {
   } else {
     return sorted[Math.floor([sorted.length / 2])];
   }
+}
+
+// calc mode
+function getMode(array) {
+  const counts = {};
+  array.forEach((el) => {
+    if (counts[el]) {
+      counts[el] += 1;
+    } else {
+      counts[el] = 1;
+    }
+  });
+  const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
+  if (new Set(Object.values(counts)).size === 1) {
+    return null;
+  }
+  const mode = Object.keys(counts).filter(
+    (el) => counts[el] === counts[highest]
+  );
+  return mode.join(', ')
 }
