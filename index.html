@@ -4,10 +4,91 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>MAS291</title>
   </head>
   <body>
+    <div class="container">
+      <div class="container-header">
+        <h1>Statistic Calculator</h1>
+        <p>Enter a list of comma-separated numbers.</p>
+      </div>
+      <div class="inputter">
+        <label for="">Number: </label>
+        <input type="text" name="" id="number-input" />
+        <button id="calculate">Calculate</button>
+      </div>
+      <div class="results">
+        <div class="res-mean res">
+          <p class="desc">
+            The <strong><i>mean</i></strong> of a list of numbers is the
+            average, calculated by taking the sum of all numbers and dividing
+            that by the count of numbers.
+          </p>
+          <div class="output" class="mean">
+            <h2>Mean :</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="res-median res">
+          <p class="desc">
+            The <strong><i>median</i></strong> of a list of numbers is the
+            number that appears in the middle of the list, when sorted from
+            least to greatest.
+          </p>
+          <div class="output" class="median">
+            <h2>Median :</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="res-mode res">
+          <p class="desc">
+            The <strong><i>mode</i></strong> of a list of numbers is the number
+            that appears most often in the list.
+          </p>
+          <div class="output" class="mode">
+            <h2>Mode :</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="res-range res">
+          <p class="desc">
+            The <strong><i>range</i></strong> of a list of numbers is the
+            difference between the largest and smallest numbers in the list.
+          </p>
+          <div class="output" class="range">
+            <h2>Range :</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="res-variance res">
+          <p class="desc">
+            The <strong><i>variance</i></strong> of a list of numbers measures
+            how far the values are from the mean, on average.
+          </p>
+          <div class="output" class="variance">
+            <h2>Variance :</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="res-stdev res">
+          <p class="desc">
+            The <strong><i>standard deviation</i></strong> of a list of numbers
+            is the square root of the variance.
+          </p>
+          <div class="output" class="stdev">
+            <h2>Standard Deviation :</h2>
+            <p>100</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="calculator.js"></script>
   </body>
 </html>
