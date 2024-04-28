@@ -51,5 +51,10 @@ function getMode(array) {
   const mode = Object.keys(counts).filter(
     (el) => counts[el] === counts[highest]
   );
-  return mode.join(', ')
+  return mode.join(", ");
+}
+
+// calc range
+function getRange(array) {
+  return Math.max(...array) - Math.min(...array);
 }
