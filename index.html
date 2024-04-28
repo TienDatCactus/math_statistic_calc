@@ -19,11 +19,11 @@
         <h1>Statistic Calculator</h1>
         <p>Enter a list of comma-separated numbers.</p>
       </div>
-      <div class="inputter">
-        <label for="">Number: </label>
-        <input type="text" name="" id="number-input" />
-        <button id="calculate">Calculate</button>
-      </div>
+      <form class="inputter">
+        <label for="number-input">Number: </label>
+        <input type="text" name="numbers" id="number-input" />
+        <button id="calculate" type="submit">Calculate</button>
+      </form>
       <div class="results">
         <div class="res-mean res">
           <p class="desc">
@@ -31,7 +31,7 @@
             average, calculated by taking the sum of all numbers and dividing
             that by the count of numbers.
           </p>
-          <div class="output" class="mean">
+          <div class="output mean">
             <h2>Mean :</h2>
             <p>0</p>
           </div>
@@ -42,7 +42,7 @@
             number that appears in the middle of the list, when sorted from
             least to greatest.
           </p>
-          <div class="output" class="median">
+          <div class="output median">
             <h2>Median :</h2>
             <p>0</p>
           </div>
@@ -52,7 +52,7 @@
             The <strong><i>mode</i></strong> of a list of numbers is the number
             that appears most often in the list.
           </p>
-          <div class="output" class="mode">
+          <div class="output mode">
             <h2>Mode :</h2>
             <p>0</p>
           </div>
@@ -62,7 +62,7 @@
             The <strong><i>range</i></strong> of a list of numbers is the
             difference between the largest and smallest numbers in the list.
           </p>
-          <div class="output" class="range">
+          <div class="output range">
             <h2>Range :</h2>
             <p>0</p>
           </div>
@@ -72,7 +72,7 @@
             The <strong><i>variance</i></strong> of a list of numbers measures
             how far the values are from the mean, on average.
           </p>
-          <div class="output" class="variance">
+          <div class="output variance">
             <h2>Variance :</h2>
             <p>0</p>
           </div>
@@ -82,9 +82,9 @@
             The <strong><i>standard deviation</i></strong> of a list of numbers
             is the square root of the variance.
           </p>
-          <div class="output" class="stdev">
+          <div class="output stdev">
             <h2>Standard Deviation :</h2>
-            <p>100</p>
+            <p>0</p>
           </div>
         </div>
       </div>
