@@ -44,9 +44,8 @@ Feel free to clone this repository and try out the statistical calculator yourse
 
 ## Author
 
-[Your Name](https://github.com/yourusername)
+[Tien Dat](https://github.com/TienDatCactus)
 
 For any inquiries or feedback, please reach out!
 
 ---
-**Note**: Replace `[Your Name](https://github.com/yourusername)` with your actual name and GitHub profile link.
