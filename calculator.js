@@ -18,6 +18,9 @@ const calculate = () => {
   // variance
   const variance = getVariance(numbers);
   $(".variance>p").textContent = variance;
+  // stdev
+  const stdev = getStdev(numbers);
+  $(".stdev>p").textContent = stdev;
 };
 
 // calc mean
@@ -81,4 +84,10 @@ function getVariance(array) {
       return acc + squaredDiffs;
     }, 0) / array.length;
   return variances;
+}
+
+// calc stdev
+function getStdev(array) {
+  const variance = getVariance(array);
+  return Math.pow(variance, 1 / 2);
 }
