@@ -9,9 +9,15 @@ const calculate = () => {
   // median
   const median = getMedian(numbers);
   $(".median>p").textContent = median;
-  //mode
+  // mode
   const mode = getMode(numbers);
   $(".mode>p").textContent = mode;
+  // range
+  const range = getRange(numbers);
+  $(".range>p").textContent = range;
+  // variance
+  const variance = getVariance(numbers);
+  $(".variance>p").textContent = variance;
 };
 
 // calc mean
@@ -46,7 +52,7 @@ function getMode(array) {
   });
   const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
   if (new Set(Object.values(counts)).size === 1) {
-    return null;
+    return "none";
   }
   const mode = Object.keys(counts).filter(
     (el) => counts[el] === counts[highest]
@@ -57,4 +63,22 @@ function getMode(array) {
 // calc range
 function getRange(array) {
   return Math.max(...array) - Math.min(...array);
+}
+
+// calc variance
+function getVariance(array) {
+  const mean = getMean(array);
+  // const differences = array.map((el) => el - mean);
+  // const squaredDifferences = differences.map((el) => el ** 2);
+  // const sumSquaredDifferences = squaredDifferences.reduce(
+  //   (acc, el) => acc + el,
+  //   0
+  // );
+  const variances =
+    array.reduce((acc, el) => {
+      const diffs = el - mean;
+      const squaredDiffs = diffs ** 2;
+      return acc + squaredDiffs;
+    }, 0) / array.length;
+  return variances;
 }
